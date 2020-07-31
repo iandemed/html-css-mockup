@@ -9,7 +9,21 @@ h1{
   font-size: 20px;
 }
 
-/* Formatting for the header elements */
+h2{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3{
+  margin: 0 16px;
+  display: inline;
+}
+
+.purple {
+  color: #9A4D9F;
+}
+
+/* Formatting for the header elements and its children*/
 
 header{
   background-color: transparent; /* Make the background transparent but leave the elements alone */
@@ -24,7 +38,7 @@ header{
 }
 
 /* Ensure that block elements are inline so that they align correctly with flexbox */
-header > *, .get-ticket h1 {
+header > * {
   display: inline;
 }
 
@@ -34,15 +48,6 @@ header > *, .get-ticket h1 {
   margin: 0 25px;
 }
 
-.get-ticket h1{
-  margin: 0 16px;
-}
-
-.purple {
-  color: #9A4D9F;
-}
-
-
 nav {
   display: flex;
 }
@@ -51,6 +56,33 @@ nav {
   display: none; /* hide the hamburger menu while not in mobile */
   padding: 15px;
 }
+
+
+/* Style all of the elements contained within the body of the web-page*/
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 5px 40px;
+  height: 274px;
+  overflow: hidden;
+}
+
+.card > * {
+  margin: 0px;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: 100;
+  height: 141px;
+  text-align: center;
+}
+
+
 
 
 footer{
