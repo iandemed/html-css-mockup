@@ -6,7 +6,7 @@ body{
 }
 
 h1{
-  font-size: 20px;
+  font-size: 32px;
 }
 
 h2{
@@ -15,7 +15,7 @@ h2{
 }
 
 h3{
-  margin: 0 16px;
+  margin: 0px 16px;
   display: inline;
 }
 
@@ -60,19 +60,57 @@ nav {
 
 /* Style all of the elements contained within the body of the web-page*/
 
-.card{
+.heading-txt-box h2{
+  font-size: 24px;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+
+.calendar-card{
+  color: #ffffff;
+  background-color: rgba(255,255,255,0.3);
+  display: inline-block; /* Allows for .calendar-txt to be centered in container */
+}
+
+.calendar-txt{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  margin: 5px 40px;
+  border: 1px black;
+}
+
+.calendar-txt > * {
+  display: inline;
+  margin: 0;
+}
+
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: 274px;
+  width: 291px;
   overflow: hidden;
 }
 
 .card > * {
   margin: 0px;
+}
+
+.card h2{
+  padding: 25px 0px;
 }
 
 .card p {
@@ -81,8 +119,6 @@ nav {
   height: 141px;
   text-align: center;
 }
-
-
 
 
 footer{
@@ -122,6 +158,26 @@ footer p {
 
   nav {
     order: -1;
+  }
+
+  .calendar-card{
+    height: 68px;
+    width: 68px;
+
+    border-radius: 8px;
+  }
+
+  .calendar-txt{
+    margin: 7px 14px;
+  }
+
+  .calendar-txt h2{
+    font-size: 31px;
+    font-weight: 400;
+  }
+
+  .calendar-txt p{
+    font-size: 10px;
   }
 
 }
