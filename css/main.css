@@ -3,8 +3,14 @@
 body{
   background-color: #9A4D9F;
   font-family: "Montserrat", sans-serif;
-  margin: 0px;
+  
   width: 100%;
+  margin: 0px;
+}
+
+body > img{
+  position: absolute;
+  z-index: -2;
 }
 
 main{
@@ -43,7 +49,6 @@ header{
   color: #ffffff;
   font-weight: bold;
 
-  background-color:#080925; /* test background*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -211,4 +216,10 @@ footer p {
     padding: 18px 0px;
     border-radius: 30px;
   }
+
+  .fish{
+    left: -241px;
+    top: -40px;
+  }
+
 }
