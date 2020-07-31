@@ -3,10 +3,16 @@
 body{
   background-color: #9A4D9F;
   font-family: "Montserrat", sans-serif;
+  margin: 0px;
+  width: 100%;
+}
+
+main{
+  margin: 28px;
 }
 
 h1{
-  font-size: 32px;
+  font-size: 41px;
 }
 
 h2{
@@ -14,15 +20,16 @@ h2{
   font-weight: 700;
 }
 
+/* Allows text to be centered within flexbox containers */
+h1, h2, p{
+  display: inline;
+  margin: 0;
+  text-align: center;
+}
+
 h3{
   margin: 0px 16px;
   display: inline;
-}
-
-
-h1, h2, h3, p{
-  display: inline;
-  margin: 0;
 }
 
 .purple {
@@ -61,6 +68,14 @@ nav {
 
 /* Style all of the elements contained within the body of the web-page*/
 
+.event-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 .heading-txt-box h2{
   font-size: 24px;
   font-weight: 100;
@@ -68,10 +83,17 @@ nav {
 }
 
 
+.heading-txt-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .calendar-card{
   color: #ffffff;
   background-color: rgba(255,255,255,0.3);
-  display: inline-block; /* Allows for .calendar-txt to be centered in container */
+  display: inline-block;
 }
 
 .calendar-txt{
@@ -79,8 +101,15 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
 
-  border: 1px black;
+.link-box{
+  display: inline-block;
+  background-color: #080925;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
 }
 
 .card-container{
@@ -111,6 +140,7 @@ nav {
   text-align: center;
 }
 
+/* Styling for the footer and all realated elements */
 
 footer{
   background-color: #080925;
@@ -121,7 +151,6 @@ footer{
   align-items: center;
 }
 
-/* <div>s are block items, so they will need to be inline to play nice */
 footer p {
   font-family: "Lato", sans-serif;
   font-size: 10px;
@@ -140,7 +169,7 @@ footer p {
 @media screen and (max-width: 375px) {
   
   .mobile-only{
-    display: inline; /* reveal the hamgurger menu */
+    display: inline; /* Reveal the hamgurger menu */
   }
 
   header{
@@ -171,4 +200,15 @@ footer p {
     font-size: 10px;
   }
 
+  .heading-txt-box{
+    height: 208px;
+    margin: 20px;
+  }
+
+  .link-box{
+    width: 316px;
+    font-size: 17px;
+    padding: 18px 0px;
+    border-radius: 30px;
+  }
 }
