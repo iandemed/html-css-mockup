@@ -5,28 +5,91 @@ body{
   font-family: "Montserrat", sans-serif;
 }
 
-header{
-  background-color: transparent; /* Make the background transparent but leave the elements alone */
+h1{
   font-size: 20px;
 }
 
-footer{
-  background-color: #080925;
+/* Formatting for the header elements */
+
+header{
+  background-color: transparent; /* Make the background transparent but leave the elements alone */
+  color: #ffffff;
+  font-weight: bold;
+
+  background-color:#080925; /* test background*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
-h1 span {
+/* Ensure that block elements are inline so that they align correctly with flexbox */
+header > *, .get-ticket h1 {
+  display: inline;
+}
+
+.get-ticket{
+  display: flex;
+  align-items: center;
+  margin: 0 25px;
+}
+
+.get-ticket h1{
+  margin: 0 16px;
+}
+
+.purple {
   color: #9A4D9F;
 }
-/* <p> and <div> are block items, so they will need to be inline to play nice */
-footer > * {
-  display: inline-block;
+
+
+nav {
+  display: flex;
+}
+
+.mobile-only{
+  display: none; /* hide the hamburger menu while not in mobile */
+  padding: 15px;
+}
+
+
+footer{
+  background-color: #080925;
+  color: #ffffff;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* <div>s are block items, so they will need to be inline to play nice */
+footer p {
   font-family: "Lato", sans-serif;
+  font-size: 10px;
+}
+
+
+.social-media {
+  display: flex; /* Inlcuded so that the padding for <a> is fully included in the body of the <div> */
+}
+
+.social-media a{
+  padding: 15px;
 }
 
 
 @media screen and (max-width: 375px) {
-  body{
-    margin: 29px;
+  
+  .mobile-only{
+    display: inline; /* reveal the hamgurger menu */
+  }
+
+  header{
+    justify-content: start;
+  }
+
+  nav {
+    order: -1;
   }
 
 }
