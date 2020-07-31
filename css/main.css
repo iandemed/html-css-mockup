@@ -19,6 +19,12 @@ h3{
   display: inline;
 }
 
+
+h1, h2, h3, p{
+  display: inline;
+  margin: 0;
+}
+
 .purple {
   color: #9A4D9F;
 }
@@ -35,11 +41,6 @@ header{
   justify-content: space-between;
   align-items: center;
 
-}
-
-/* Ensure that block elements are inline so that they align correctly with flexbox */
-header > * {
-  display: inline;
 }
 
 .get-ticket{
@@ -82,12 +83,6 @@ nav {
   border: 1px black;
 }
 
-.calendar-txt > * {
-  display: inline;
-  margin: 0;
-}
-
-
 .card-container{
   display: flex;
   flex-direction: column;
@@ -103,10 +98,6 @@ nav {
   height: 274px;
   width: 291px;
   overflow: hidden;
-}
-
-.card > * {
-  margin: 0px;
 }
 
 .card h2{
