@@ -185,6 +185,11 @@ footer p {
     order: -1;
   }
 
+  main{
+    margin-top: 230px;
+    margin-bottom: 269px;
+  }
+
   .calendar-card{
     height: 68px;
     width: 68px;
@@ -208,6 +213,11 @@ footer p {
   .heading-txt-box{
     height: 208px;
     margin: 20px;
+  }
+
+  .card-container{
+    height: 945px;
+    margin: 51px 0px;
   }
 
   .link-box{
