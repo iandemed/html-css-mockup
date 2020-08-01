@@ -3,8 +3,6 @@
 body{
   background-color: #9A4D9F;
   font-family: "Montserrat", sans-serif;
-  
-  width: 100%;
   margin: 0px;
 }
 
@@ -14,7 +12,7 @@ body > img{
 }
 
 main{
-  margin: 28px;
+  margin: 0px 28px;
 }
 
 h1{
@@ -53,6 +51,18 @@ header{
   justify-content: space-between;
   align-items: center;
 
+}
+
+.splash-banner{
+  background-image: url("../imgs/fish-splash-header.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.map-banner{
+  background-image: url("../imgs/black-light-location-x3.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .get-ticket{
@@ -172,7 +182,7 @@ footer p {
 
 
 @media screen and (max-width: 375px) {
-  
+
   .mobile-only{
     display: inline; /* Reveal the hamgurger menu */
   }
@@ -183,11 +193,6 @@ footer p {
 
   nav {
     order: -1;
-  }
-
-  main{
-    margin-top: 230px;
-    margin-bottom: 269px;
   }
 
   .calendar-card{
@@ -217,7 +222,7 @@ footer p {
 
   .card-container{
     height: 945px;
-    margin: 51px 0px;
+    margin-top: 51px;
   }
 
   .link-box{
@@ -227,9 +232,14 @@ footer p {
     border-radius: 30px;
   }
 
-  .fish{
-    left: -241px;
-    top: -40px;
+  .splash-banner{
+    height: 300px;
+    background-position: -200px -25px;
+  }
+
+  .map-banner{
+    height: 325px;
+    background-position: -900px -75px;  
   }
 
 }
