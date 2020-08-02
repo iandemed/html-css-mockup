@@ -12,7 +12,7 @@ body > img{
 }
 
 main{
-  margin: 0px 28px;
+  margin: 0px auto;
 }
 
 h1{
@@ -54,7 +54,7 @@ header{
 }
 
 .splash-banner{
-  background-image: url("../imgs/fish-splash-header.png");
+  background-image: url("../imgs/fish-splash-header-3x.png");
   background-repeat: no-repeat;
   overflow: hidden;
 }
@@ -73,21 +73,41 @@ header{
 
 nav {
   display: flex;
+  flex-wrap: wrap;
+  margin: 15px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 10px;
 }
 
 .mobile-only{
   display: none; /* hide the hamburger menu while not in mobile */
-  padding: 15px;
+  padding: 20px;
+}
+
+.create-event{
+  border: 2px solid #ffffff;
+  border-radius: 5px;
 }
 
 
 /* Style all of the elements contained within the body of the web-page*/
 
 .event-box{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  justify-items: center;
   align-items: center;
+ 
+  grid-template-areas: 
+  "calendar-card"
+  "event-txt"
+  "link-box";
+
 }
 
 
@@ -103,12 +123,16 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  grid-area: event-txt;
 }
 
 .calendar-card{
   color: #ffffff;
   background-color: rgba(255,255,255,0.3);
   display: inline-block;
+
+  grid-area: calendar-card;
 }
 
 .calendar-txt{
@@ -125,11 +149,14 @@ nav {
   text-decoration: none;
   text-align: center;
   font-weight: 700;
+  font-size: 17px;
+  border-radius: 30px;
+
+  grid-area: link-box;
 }
 
 .card-container{
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -140,7 +167,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 274px;
-  width: 291px;
+  width: 366px;
   overflow: hidden;
 }
 
@@ -153,6 +180,7 @@ nav {
   font-weight: 100;
   height: 141px;
   text-align: center;
+  text-overflow: clip;
 }
 
 /* Styling for the footer and all realated elements */
@@ -180,11 +208,99 @@ footer p {
   padding: 15px;
 }
 
+.map-banner{
+  height: 325px;
+}
 
-@media screen and (max-width: 375px) {
+/* Included min-width argument to make these stylistic changes exclusive to
+tablet sized screens */
 
+@media screen and (max-width:834px) {
+  
+ .splash-banner{
+  background-image: url(../imgs/fish-splash-header-tablet.png);  
+  height: 509px;
+  background-position: -270px 0px;
+  }
+
+  .link-box{
+    width: 340px;
+    padding: 20px 0px;
+  }
+
+  .calendar-card{
+    height: 134px;
+    width: 134px;
+
+    border-radius: 8px;
+  }
+
+  .calendar-txt h2{
+    font-size: 65px;
+    font-weight: 400;
+  }
+
+  .calendar-txt p {
+    font-size: 25px;
+  }
+
+  .heading-txt-box h1{
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .heading-txt-box h2{
+    font-size: 24px;
+    font-weight: 100;
+  }
+
+  .heading-txt-box p{
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .card-container{
+    height: 958px;
+    flex-direction: column;
+  }
+
+  .card{
+    width: 552px;
+  }
+
+  .map-banner{
+    height: 375px;
+    background-position: -750px -45px;  
+  }
+
+}
+
+@media screen and (max-width: 834px) and (min-width: 611px){
+  .event-box{
+    grid-template-areas: 
+    "calendar-card event-txt"
+    ". link-box";
+    align-items: start;
+
+    margin-bottom: 82px;
+  }
+}
+
+
+@media screen and (max-width: 610px) {
+
+  .splash-banner{
+    background-image: url(../imgs/fish-splash-header-phone.png);
+    height: 300px;
+    background-position: -200px -25px;
+  }
+  
   .mobile-only{
     display: inline; /* Reveal the hamgurger menu */
+  }
+
+  .non-mobile{
+    display: none;
   }
 
   header{
@@ -225,21 +341,17 @@ footer p {
     margin-top: 51px;
   }
 
-  .link-box{
-    width: 316px;
-    font-size: 17px;
-    padding: 18px 0px;
-    border-radius: 30px;
+  .card{
+    width: 291px;
   }
 
-  .splash-banner{
-    height: 300px;
-    background-position: -200px -25px;
+  .link-box{
+    width: 316px;
+    padding: 18px 0px;
   }
 
   .map-banner{
-    height: 325px;
     background-position: -900px -75px;  
   }
-
+  }
 }
