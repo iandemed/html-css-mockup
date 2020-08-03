@@ -13,10 +13,11 @@ body > img{
 
 main{
   margin: 0px auto;
+  text-align: center;
 }
 
 h1{
-  font-size: 41px;
+  font-size: 32px;
 }
 
 h2{
@@ -54,7 +55,6 @@ header{
 }
 
 .splash-banner{
-  background-image: url("../imgs/fish-splash-header-3x.png");
   background-repeat: no-repeat;
   overflow: hidden;
 }
@@ -107,7 +107,6 @@ nav a {
   "calendar-card"
   "event-txt"
   "link-box";
-
 }
 
 
@@ -131,8 +130,13 @@ nav a {
   color: #ffffff;
   background-color: rgba(255,255,255,0.3);
   display: inline-block;
+  height: 80px;
+  width: 80px;
+
+  -webkit-user-drag: ;
 
   grid-area: calendar-card;
+  border-radius: 8px;
 }
 
 .calendar-txt{
@@ -141,6 +145,16 @@ nav a {
   justify-content: space-between;
   align-items: center;
 }
+
+.calendar-txt h2{
+  font-size: 39px;
+  font-weight: 400;
+}
+
+.calendar-txt p{
+  font-size: 16px;
+}
+
 
 .link-box{
   display: inline-block;
@@ -151,14 +165,16 @@ nav a {
   font-weight: 700;
   font-size: 17px;
   border-radius: 30px;
+  padding: 18px;
 
   grid-area: link-box;
 }
 
 .card-container{
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .card{
@@ -169,6 +185,7 @@ nav a {
   height: 274px;
   width: 366px;
   overflow: hidden;
+  padding: 22px 16px;
 }
 
 .card h2{
@@ -209,17 +226,31 @@ footer p {
 }
 
 .map-banner{
-  height: 325px;
+  height: 456px;
+  background-position: -500px 0px;  
 }
 
-/* Included min-width argument to make these stylistic changes exclusive to
-tablet sized screens */
+@media screen and (min-width:835px){
+  .splash-banner{
+    background-image: url("../imgs/fish-splash-header-desktop.png");
+    background-position: -240px 0px;
+  }
+
+  .event-box{
+    grid-template-areas: 
+    ". calendar-card"
+    ". event-txt"
+    ". link-box";
+    grid-template-columns: 1.5fr 1fr;
+    height: 370px;
+    margin-bottom: 165px;
+  }
+}
 
 @media screen and (max-width:834px) {
   
  .splash-banner{
   background-image: url(../imgs/fish-splash-header-tablet.png);  
-  height: 509px;
   background-position: -270px 0px;
   }
 
@@ -231,8 +262,6 @@ tablet sized screens */
   .calendar-card{
     height: 134px;
     width: 134px;
-
-    border-radius: 8px;
   }
 
   .calendar-txt h2{
@@ -259,11 +288,6 @@ tablet sized screens */
     font-weight: 700;
   }
 
-  .card-container{
-    height: 958px;
-    flex-direction: column;
-  }
-
   .card{
     width: 552px;
   }
@@ -275,14 +299,19 @@ tablet sized screens */
 
 }
 
+/* Included min-width argument to make these stylistic changes exclusive to
+tablet sized screens */
+
 @media screen and (max-width: 834px) and (min-width: 611px){
   .event-box{
     grid-template-areas: 
     "calendar-card event-txt"
     ". link-box";
     align-items: start;
+    justify-content: space-evenly;
 
     margin-bottom: 82px;
+    margin-top: 460px;
   }
 }
 
@@ -291,7 +320,6 @@ tablet sized screens */
 
   .splash-banner{
     background-image: url(../imgs/fish-splash-header-phone.png);
-    height: 300px;
     background-position: -200px -25px;
   }
   
@@ -311,11 +339,13 @@ tablet sized screens */
     order: -1;
   }
 
+  .event-box{
+    margin-top: 202px;
+  }
+
   .calendar-card{
     height: 68px;
     width: 68px;
-
-    border-radius: 8px;
   }
 
   .calendar-txt{
@@ -352,6 +382,5 @@ tablet sized screens */
 
   .map-banner{
     background-position: -900px -75px;  
-  }
   }
 }
