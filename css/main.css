@@ -96,7 +96,7 @@ nav a {
 }
 
 
-/* Style all of the elements contained within the body of the web-page*/
+/* Style all of the elements contained within the body of the web-page */
 
 .event-box{
   display: grid;
@@ -133,8 +133,6 @@ nav a {
   height: 80px;
   width: 80px;
 
-  -webkit-user-drag: ;
-
   grid-area: calendar-card;
   border-radius: 8px;
 }
@@ -170,8 +168,12 @@ nav a {
   grid-area: link-box;
 }
 
+
+/* Use inline-flex so we can center the container without using margin auto which 
+casuses some image clipping with page adjustments
+*/
 .card-container{
-  display: inline-flex;
+  display: inline-flex; 
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
@@ -235,6 +237,8 @@ footer p {
     background-image: url("../imgs/fish-splash-header-desktop.png");
     background-position: -240px 0px;
   }
+
+  /* Use this to offset the event text to the left fo the splash image */
 
   .event-box{
     grid-template-areas: 
@@ -303,6 +307,10 @@ footer p {
 tablet sized screens */
 
 @media screen and (max-width: 834px) and (min-width: 611px){
+  
+  /* The tablet view is the only screen that has this particular configuration
+  for the event information --- one of the leading reasons CSS Grid was choosen */
+  
   .event-box{
     grid-template-areas: 
     "calendar-card event-txt"
@@ -328,15 +336,15 @@ tablet sized screens */
   }
 
   .non-mobile{
-    display: none;
+    display: none; 
   }
 
   header{
-    justify-content: start;
+    justify-content: start; /* Justify all of the elements in header to the left */
   }
 
   nav {
-    order: -1;
+    order: -1; /* Have the hamburger menu on the leftmost side */
   }
 
   .event-box{
